@@ -4,7 +4,7 @@
   "license": "MIT",
   "angular-cli": {},
   "scripts": {
-    "start": "nodemon backend dist/server.js"
+    "start": "node server.js"
   },
   "private": true,
   "dependencies": {
