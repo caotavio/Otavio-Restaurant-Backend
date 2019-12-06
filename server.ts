@@ -9,6 +9,9 @@ const server: Express = jsonServer.create()
 const router = jsonServer.router('./db.json')
 const middlewares = jsonServer.defaults()
 
+const express = require('express');
+const distPath = __dirname + '/dist/';
+
 // Set default middlewares (logger, static, cors and no-cache)
 server.use(middlewares)
 
@@ -18,6 +21,8 @@ server.use(jsonServer.bodyParser)
 server.post('/login', handleAuthentication)
 server.use('/orders', handleAuthorization)
 
+
+server.use(express.static(distPath));
 // Use default router
 server.use(router)
 
