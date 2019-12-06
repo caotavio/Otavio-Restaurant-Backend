@@ -10,4 +10,4 @@ app.use(express.static(distPath));
 //     res.sendFile(path.join(`${distPath}index.html`));
 // });
 
-app.listen(process.env.PORT || 8080);
+app.listen(process.env.PORT || 4000);
