@@ -10,7 +10,6 @@ var middlewares = jsonServer.defaults();
 var port = Number(process.env.PORT || 3000);
 
 server.use(middlewares);
-// server.use(jsonServer.bodyParser);
 
 //Login middleware
 server.post('/login', auth_1.handleAuthentication);
